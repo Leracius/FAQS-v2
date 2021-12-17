@@ -1,3 +1,6 @@
+*{
+    font-family: 'Kumbh Sans', sans-serif;
+}
 body {
     margin: 0;
     box-sizing: border-box;
@@ -91,18 +94,18 @@ body {
     display: flex;
     justify-content: space-between;
     text-align: left;
+    align-content: center;
     width: 100%;
     border-style: none;
     background: white;
     margin-bottom: 1em;
-    color: var(--Very-dark-grayish-blue);
     outline: none;
 }
 
 button img{
     width: 14px;
     height: 10px;
-    margin-top: 4px;
+    margin-top: 10px;
     position: relative;
     transform: rotateZ(0deg);
     transition: transform .2s ease-out;
@@ -116,12 +119,26 @@ h1 {
     margin-bottom: .5em;
     color: var(--Very-dark-desaturated-blue);
 }
-p {
-    padding: 0;
+h2 {
     position: relative;
-    margin: 0 0 0 5px;
+    color: var(--Very-dark-grayish-blue);
+    transition: font-weight .2s ease-out;
+}
+
+.change{
+    font-weight: 700;
+    transition: font-weight .2s ease-in;
+}
+
+h2, p{
     font-size: 12px;
-    font-weight: 400;
+    font-weight: 400; 
+    margin: 0;
+    padding: 10px 0 0 0;
+}
+
+p {
+    padding: 0 0 0 5px;
     position: relative;
     overflow: hidden;
     max-height: 0;
@@ -130,12 +147,11 @@ p {
 }
 
 .abrir_cerrar {
-    max-height: 20px;
+    max-height: 15px;
     transition: max-height .1s ease-in;
 }
 .grow-card{
     position: relative;
-    padding: 5px;
     border-bottom: 1px solid var(--Light-grayish-blue);
     margin: 0;
 }
@@ -146,10 +162,6 @@ p {
     margin-bottom: 10px;
     color: var(--Very-dark-grayish-blue);
     font-weight: 700;
-}
-.p-hidden {
-    color: grey;
-    padding-left: 7px;
 }
 @media only screen and (max-width: 720px){
     body {
