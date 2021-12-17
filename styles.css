@@ -1,0 +1,214 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+:root {
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+}
+.card {
+    width: 800px;
+    height: 420px;
+    background: white;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;    
+}
+
+/* Images */
+.image-section {
+    width: 50%;
+    height: 100%;
+}
+.pattern, .box, .woman {
+    position: relative;
+}
+.pattern {    
+    z-index: 1;
+    right: 400px;
+    top: -220px;
+}
+.pattern img{
+    width: 760px;
+    height: 760px;
+}
+.woman {
+    z-index: 5;
+    top: -730px;
+    left: -90px;
+}
+.woman img{
+    width: 450px;
+    height: 342px;
+}
+.box {   
+    z-index: 10;
+    top: 160px;
+    left: -55px;
+    height: 3em;
+    width: 40px;
+}
+.mobile-pattern, .mobile-woman {
+    display: none;
+}
+.card-container {
+    display: flex;
+    justify-content: center;
+}
+/* Botones */
+.card-section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: auto;
+}
+.button-section {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    height: 90%;
+    background: white;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+.button-section button{
+    padding-top: 5px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    width: 100%;
+    border-style: none;
+    background: white;
+    margin-bottom: 1em;
+    color: var(--Very-dark-grayish-blue);
+    outline: none;
+}
+
+button img{
+    width: 14px;
+    height: 10px;
+    margin-top: 4px;
+    position: relative;
+    transform: rotateZ(0deg);
+    transition: transform .2s ease-out;
+}
+.rotate {
+    transform: rotateZ(180deg);
+    transition: transform .2s ease-in;
+}
+
+h1 {
+    margin-bottom: .5em;
+    color: var(--Very-dark-desaturated-blue);
+}
+p {
+    padding: 0;
+    position: relative;
+    margin: 0 0 0 5px;
+    font-size: 12px;
+    font-weight: 400;
+    position: relative;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .1s ease-out;
+    color: hsl(0, 0%, 50%);
+}
+
+.abrir_cerrar {
+    max-height: 20px;
+    transition: max-height .1s ease-in;
+}
+.grow-card{
+    position: relative;
+    padding: 5px;
+    border-bottom: 1px solid var(--Light-grayish-blue);
+    margin: 0;
+}
+.p-img {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: var(--Very-dark-grayish-blue);
+    font-weight: 700;
+}
+.p-hidden {
+    color: grey;
+    padding-left: 7px;
+}
+@media only screen and (max-width: 720px){
+    body {
+        height: 1080px;
+        align-items: flex-start;
+    }
+    .card-container {
+        width: 95%;
+    }
+    .card {
+        flex-direction: column;
+        width: 90%;
+        height: 480px;
+        margin-top: 10em;
+        overflow: visible;
+    }
+    .image-section {
+        width: 100%;
+        height: 140px;
+    }
+    .box, .pattern, .woman{
+        display: none;
+    }
+    .mobile-pattern, .mobile-woman {
+        display: flex;
+        position: relative;
+        justify-content: center;
+    }
+    .mobile-woman {
+        z-index: 5;
+        bottom: 135px;
+        right: 20px;
+    }
+    .mobile-woman img{
+        width: 340px;
+        height: 250px;
+    }
+    .mobile-pattern {
+        z-index: 1;
+        bottom: 250px;
+        
+    }
+    .mobile-pattern img{
+        width: 300px;
+        height: 130px;
+    }
+    .card-section-container {
+        width: 100%;
+        height: 80%;
+    }
+    .button-section {
+        width: 80%;
+    }
+    .titulo {
+        margin: 0 0 1em 0;
+        display: flex;
+        justify-content: center;
+    }
+    h1 {
+        margin: 0;
+    }
+}
